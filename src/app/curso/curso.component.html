@@ -5,7 +5,7 @@
     <label>Valor</label>
     <input type="text" name="valorCurso" [(ngModel)]="curso.valorCurso">
     <br>
-    <button>Cadastrar</button>
+    <button (click)="cadastro(this.curso)">Cadastrar</button>
     <button>Alterar</button>
     <button>Excluir</button>
 </form>
