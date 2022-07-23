@@ -1,9 +1,9 @@
-<form>
+<form class="form-group">
     <label>Curso</label>
-    <input type="text" name="nomeCurso" [(ngModel)]="curso.nomeCurso">
+    <input class="form-control" type="text" name="nomeCurso" [(ngModel)]="curso.nomeCurso">
     <br>
     <label>Valor</label>
-    <input type="text" name="valorCurso" [(ngModel)]="curso.valorCurso">
+    <input class="form-control" type="text" name="valorCurso" [(ngModel)]="curso.valorCurso">
     <br>
     <button (click)="cadastro(this.curso)">Cadastrar</button>
     <button (click)="alterar(this.curso)">Alterar</button>
@@ -13,10 +13,10 @@
 
 
 <!--Tabela-->
-<table border="1">
-    <tr *ngFor="let v of vetor">
-        <td>{{v.nomeCurso}}</td>
-        <td>{{v.valorCurso}}</td>
-        <td><button (click)="selecionarCurso(v)">Selecionar curso</button></td>
+<table border="1" class="table">
+    <tr *ngFor="let v of vetor" >
+        <td scope="col">{{v.nomeCurso}}</td>
+        <td scope="col">{{v.valorCurso}}</td>
+        <td scope="col"><button (click)="selecionarCurso(v)">Selecionar curso</button></td>
     </tr>
 </table>

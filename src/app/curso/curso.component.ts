@@ -36,9 +36,7 @@ export class CursoComponent implements OnInit {
         //adicionando dados ao vetor
         this.vetor=res;
 
-        //limpar os atributos
-        //this.curso.nomeCurso="";
-        //this.curso.valorCurso=0;
+        //cria um objeto vazio
         this.curso = new Curso();
 
         //Atualizar a listagem 
@@ -64,8 +62,9 @@ export class CursoComponent implements OnInit {
         this.vetor = res;
 
         //limpar os valores do objeto 
-        this.curso.nomeCurso = "";
-        this.curso.valorCurso=0;
+       // this.curso.nomeCurso = "";
+        //this.curso.valorCurso=0;
+        this.curso = new Curso();
 
         //Atualiza a listagem
         this.selecao();
@@ -80,8 +79,9 @@ export class CursoComponent implements OnInit {
       (res:Curso[]) =>{
         this.vetor = res;
 
-        this.curso.nomeCurso = "";
-        this.curso.valorCurso=0;
+        this.curso = new  Curso();
+       // this.curso.nomeCurso = "";
+       // this.curso.valorCurso=0;
       }
     ) 
   }
